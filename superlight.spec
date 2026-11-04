@@ -1,6 +1,6 @@
 Name:		superlight
 Version:	1.0.2
-Release:	1
+Release:	2
 Summary:	System Monitor for Linux desktops
 License:        GPL-3+
 URL:            https://github.com/xapp-project/superlight
@@ -11,16 +11,16 @@ Group:		Graphical desktop/Other
 BuildSystem:    meson
 
 BuildRequires:  gettext
-BuildRequires:	lib64glib2.0-devel
-BuildRequires:	lib64gio-gir2.0
-BuildRequires:	lib64gtk3_0
+BuildRequires:	pkgconfig(glib-2.0)
+BuildRequires:	typelib(Gio)
+BuildRequires:	pkgconfig(gtk+-3.0)
 BuildRequires:  meson
 BuildRequires:  pkgconfig
 BuildRequires:  python
 
-Requires:       lib64gtk-gir3.0
-Requires:       lib64upower-glib-gir1.0
-Requires:       lib64xapp-gir3.2
+Requires:       typelib(Gtk)
+Requires:       typelib(UPowerGlib)
+Requires:       typelib(XApp)
 Requires:       python
 Requires:       python-cairo
 Requires:       python-gi
@@ -30,7 +30,7 @@ Requires:       python-xapp
 Requires:       upower
 Requires:       xapp-symbolic-icons
 
-Recommends:	lib64flatpak-gir1.0
+Recommends:	typelib(Flatpak)
 
 %description
 System Monitor for Linux desktops
