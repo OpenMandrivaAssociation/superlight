@@ -1,6 +1,6 @@
 Name:		superlight
-Version:	1.0.2
-Release:	2
+Version:	1.0.3
+Release:	1
 Summary:	System Monitor for Linux desktops
 License:        GPL-3+
 URL:            https://github.com/xapp-project/superlight
@@ -38,7 +38,15 @@ System Monitor for Linux desktops
 %prep
 %autosetup -p1
 
-%files
+%build
+%meson_build
+ 
+%install
+%meson_install
+
+%find_lang %{name}
+
+%files -f %{name}.lang
 %license LICENSES/*
 %doc README.md
 %{_bindir}/superlight
