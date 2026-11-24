@@ -1,5 +1,5 @@
 Name:		superlight
-Version:	1.0.3
+Version:	1.0.4
 Release:	1
 Summary:	System Monitor for Linux desktops
 License:        GPL-3+
